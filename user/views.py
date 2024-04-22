@@ -50,4 +50,5 @@ class authenticated_check_API(APIView):
     authentication_classes = [TokenAuthentication]
 
     def get(self, request):
+        print("minor change")
         return Response("User is authenticated.")
