@@ -8,9 +8,12 @@ from .models import ufc_fighter, weight_division
 from .serializers import ufc_fighter_serializer, user_serializer, register_ufc_fighter_serializer, weight_serializer
 from django.core.paginator import Paginator
 
-@api_view(['GET'])
-def hello(request):
-    return Response("Welcome to Fighters Backend Application.")
+class hello(APIView):
+    authentication_classes = []
+    permission_classes = []
+
+    def get(self, request):
+        return Response("Welcome to Fighters Backend Application.")
 
 @api_view(['POST'])
 def ufc_fighter_api(request):

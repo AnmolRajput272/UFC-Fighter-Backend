@@ -7,7 +7,7 @@ router = DefaultRouter()
 router.register(r'ufc-fighter-vs-api', ufc_fighter_API)
 
 urlpatterns = [
-    path('hello', hello),
+    path('hello', hello.as_view()),
     path('ufc_fighter', ufc_fighter_api),
     path('ufc_fighters', ufc_fighters_api),
     path('ufc_fighter/<id>', ufc_fighter_by_id_api),
